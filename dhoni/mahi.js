@@ -1,10 +1,10 @@
 let a=10;
-let b=13;
-let c=17;
+let b=20;
+let c=30;
 if(a>b && a>c){
-    console.log("a is greatest")
-}else if(b>c && b>a){
-    console.log("b is greatest")
-}else{
+    console.log("a is greattest")
+}else if(b>a && b>c){
+    console.log("b is greattest")
+}else {
     console.log("c is greatest")
 }
