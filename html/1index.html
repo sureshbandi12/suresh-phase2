@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+   p{
+    border-style: solid;
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+   } 
+    </style>
+</head>
+<body>
+    <center>
+        <label for="text"> enter your text here</label>
+        <input type="text" name="text" id="text"><br>
+        <br>
+        <input type="submit" value="submit" id="submit">
+        <p id="data"></p>
+    </center>
+    
+</body>
+<script>
+    let input=document.querySelector("#text");
+    let submit=document.querySelector("#submit");
+    submit.addEventListener("click", function(){
+        let data=document.querySelector("#data");
+        data.innerHTML=input.value;
+    })
+</script>
+</html>

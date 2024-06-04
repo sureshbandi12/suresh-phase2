@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+        body {
+            background-color: aqua;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        .outer {
+            margin: 200px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="outer">
+            <h1>Enter your Text</h1>
+            <textarea id="text-input" cols="30" rows="5"></textarea>
+            <br>
+            <select id="fonts">
+                <option value="serif">Serif</option>
+                <option value="Gill Sans">Gill Sans</option>
+                <option value="monospace">Monospace</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Lucida Sans">Lucida Sans</option>
+                <option value="Ubuntu">Ubuntu</option>
+            </select>
+            <button type="submit" id="change-btn">Change</button>
+            <h2>Formatted Text is:</h2>
+            <div class="output" id="output"></div>
+        </div>
+    </center>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById('change-btn').addEventListener('click',function(){
+                var text=document.getElementById('text-input').value;
+                var selectedFont=document.getElementById('fonts').value;
+                var outputDiv=document.getElementById('output');
+                outputDiv.style.fontFamily=selectedFont;
+                outputDiv.textContent=text;
+            })
+        })
+    </script>
+</body>
+</html>
